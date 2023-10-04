@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  billing_mysql:
+    build:
+      context: ../billing
+      args:
+        - MYSQL_DATABASE=billing
+        - MYSQL_USER=billing
+        - MYSQL_PASSWORD=my-secret-pw
+        - MYSQL_ROOT_PASSWORD=my-secret-pw
+    ports:
+      - "3306:3306"
+
+networks:
+  billing-network:
+       driver: bridge
