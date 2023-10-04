@@ -17,4 +17,8 @@ public class UserController {
     public ResponseEntity register(){
         return ResponseEntity.ok().build();
     }
+    @PostMapping("/login")
+    public ResponseEntity login(){
+        return ResponseEntity.ok().build();
+    }
 }
