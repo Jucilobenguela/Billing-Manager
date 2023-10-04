@@ -8,7 +8,9 @@ import com.auth0.jwt.exceptions.JWTVerificationException;
 import com.billing.models.User;
 import jakarta.servlet.http.Cookie;
 import jakarta.servlet.http.HttpServletResponse;
+import lombok.AllArgsConstructor;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Configuration;
 import org.springframework.stereotype.Service;
 
 import java.time.Instant;
@@ -17,8 +19,8 @@ import java.time.ZonedDateTime;
 
 @Service
 public class TokenConfig {
-    @Value("${api.security.token.secret}")
-    private String secret;
+  @Value("${api.security.token.secret}")
+   private String secret;
 
     public String generateToken(User user){
         try{
