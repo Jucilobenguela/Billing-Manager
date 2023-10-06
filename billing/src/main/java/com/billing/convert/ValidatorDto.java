@@ -3,7 +3,6 @@ package com.billing.convert;
 import com.billing.exception.DTOValidationException;
 import jakarta.validation.ConstraintViolation;
 import jakarta.validation.Validation;
-import jakarta.validation.ValidationException;
 import jakarta.validation.Validator;
 
 import java.util.Set;
